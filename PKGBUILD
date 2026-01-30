@@ -6,7 +6,7 @@ pkgver=6.5.5.1
 _pkgver=$pkgver
 _pkgtag="${pkgver}"
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=1
+pkgrel=2
 pkgdesc='KDE Plasma Workspace, light version with fixes and improvements for X11 session, for XLibre'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace'
@@ -150,6 +150,7 @@ package_sonic-workspace() {
   conflicts=(plasma-workspace plasma-wayland-session)
   provides=(plasma-workspace)
   groups=(sonicde)
+  options=('!debug')
 
   DESTDIR="$pkgdir" cmake --install build
 

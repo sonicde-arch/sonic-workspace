@@ -1,7 +1,7 @@
 pkgbase = sonic-workspace
 	pkgdesc = KDE Plasma Workspace, light version with fixes and improvements for X11 session, for XLibre
 	pkgver = 6.5.5.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Sonic-DE/sonic-workspace
 	arch = x86_64
 	groups = plasma
@@ -237,6 +237,7 @@ pkgname = sonic-workspace
 	provides = plasma-workspace
 	conflicts = plasma-workspace
 	conflicts = plasma-wayland-session
+	options = !debug
 
 pkgname = sonic-x11-session
 	pkgdesc = Plasma X11 session, sonic edition, for XLibre
