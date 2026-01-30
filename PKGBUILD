@@ -2,9 +2,9 @@
 
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
-pkgver=6.5.5
+pkgver=6.5.5.1
 _pkgver=$pkgver
-_pkgtag="v${pkgver}"
+_pkgtag="${pkgver}"
 _dirver=$(echo $pkgver | cut -d. -f1-3)
 pkgrel=1
 pkgdesc='KDE Plasma Workspace, light version with fixes and improvements for X11 session, for XLibre'
@@ -121,7 +121,7 @@ makedepends=(baloo
              qcoro)
 groups=(plasma)
 source=("git+${url}.git#tag=${_pkgtag}")
-sha256sums=('6b3684159f4dd3176aea07242d0d25d31e66ad21a87a2da0f85c4b37330b94d6')
+sha256sums=('79bcc4f78c9ff013138516832be4e257ee5c98a9addbc0874338f05acc954346')
 validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
@@ -146,7 +146,7 @@ package_sonic-workspace() {
             'plasma-workspace-wallpapers: additional wallpapers'
             'plasma5-integration: use Plasma settings in Qt5 applications'
             'xdg-desktop-portal-gtk: sync font settings to Flatpak apps')
-  depends+=(plasma-x11-session plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
+  depends+=(sonic-x11-session plasma-integration) # Declare runtime dependency here to avoid dependency cycles at build time
   conflicts=(plasma-workspace plasma-wayland-session)
   provides=(plasma-workspace)
   groups=(sonicde)
@@ -159,7 +159,7 @@ package_sonic-workspace() {
 
 package_sonic-x11-session() {
   pkgdesc='Plasma X11 session, sonic edition, for XLibre'
-  depends=(plasma-workspace-sonic kwin-x11-sonic)
+  depends=(sonic-workspace)
   provides=(plasma-x11-session)
   conflicts=(plasma-x11-session)
   groups=(sonicde)
