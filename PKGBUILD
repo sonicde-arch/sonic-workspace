@@ -2,11 +2,11 @@
 
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
-pkgver=6.6.0
+pkgver=6.6.1
 _pkgver=$pkgver
 _pkgtag="${pkgver}"
 _dirver=$(echo $pkgver | cut -d. -f1-3)
-pkgrel=2
+pkgrel=1
 pkgdesc='KDE Plasma Workspace, light version with fixes and improvements for X11 session, for XLibre'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace'
@@ -67,7 +67,6 @@ depends=(accountsservice
          kwallet
          kwayland
          kwidgetsaddons
-         kwin
          kwindowsystem
          kxmlgui
          layer-shell-qt
@@ -92,6 +91,7 @@ depends=(accountsservice
          plasma-activities-stats
          plasma5support
          prison
+         sonic-win
          qt6-5compat
          qt6-base
          qt6-declarative
@@ -120,15 +120,17 @@ makedepends=(baloo
              plasma-wayland-protocols
              qcoro)
 groups=(plasma)
-source=("git+${url}.git#tag=${_pkgtag}")
-sha256sums=('64fcb9419a7c2574a5173e9ebaabec87ff978a50e8056035dce0aa86be584187')
+source=("$pkgname-${_pkgver}.tar.gz::${url}/archive/refs/tags/${_pkgtag}.tar.gz")
+#source=("git+${url}.git#tag=${_pkgtag}")
+sha256sums=('8fbf9353d73358a94cbb47d52f653330e19a65292cfbfbd337e20f5ee5352b94')
 validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
               '1FA881591C26B276D7A5518EEAAF29B42A678C20') # Marco Martin <notmart@gmail.com>
 
 build() {
-  cmake -B build -S $pkgname \
+  #cmake -B build -S $pkgname \
+  cmake -B build -S $pkgname-$pkgver \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DGLIBC_LOCALE_GEN=OFF \
     -DBUILD_TESTING=OFF
