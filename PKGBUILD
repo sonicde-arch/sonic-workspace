@@ -2,7 +2,7 @@
 
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
-pkgver=6.6.2
+pkgver=6.6.3
 _pkgver=$pkgver
 _pkgtag="${pkgver}"
 _dirver=$(echo $pkgver | cut -d. -f1-3)
@@ -122,7 +122,7 @@ makedepends=(baloo
 groups=(plasma)
 source=("$pkgname-${_pkgver}.tar.gz::${url}/archive/refs/tags/${_pkgtag}.tar.gz")
 #source=("git+${url}.git#tag=${_pkgtag}")
-sha256sums=('753df8f94511fb783f3fe88750cd302ad2beb6e88041716e7d8f6866f773840a')
+sha256sums=('15fbcbcf649020be073d9a9ab77d459d8fea720ffe11aeeb7a7fe34188d60615')
 validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
