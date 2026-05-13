@@ -34,7 +34,6 @@ depends=(accountsservice
          kdeclarative
          kded
          kdbusaddons
-         kglobalaccel
          kguiaddons
          kholidays
          ki18n
@@ -56,7 +55,6 @@ depends=(accountsservice
          kpipewire
          krunner
          kquickcharts
-         kscreenlocker
          kservice
          kstatusnotifieritem
          ksvg
@@ -67,14 +65,11 @@ depends=(accountsservice
          kwallet
          kwayland
          kwidgetsaddons
-         kwindowsystem
          kxmlgui
          layer-shell-qt
          libcanberra
          libice
          libkexiv2
-         libksysguard
-         libplasma
          libqalculate
          libsm
          libx11
@@ -102,6 +97,11 @@ depends=(accountsservice
          qt6-virtualkeyboard
          sh
          solid
+         sonic-frameworks-keybind
+         sonic-frameworks-windowsystem
+         sonic-interface-libraries
+         sonic-screenlocker
+         sonic-sysguard-library
          systemd-libs
          wayland
          xcb-util
