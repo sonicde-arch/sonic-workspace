@@ -3,11 +3,9 @@
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
 pkgver=6.6.4
-_pkgver=$pkgver
 _pkgtag="${pkgver}"
-_dirver=$(echo $pkgver | cut -d. -f1-3)
 pkgrel=1
-pkgdesc='KDE Plasma Workspace, light version with fixes and improvements for X11 session, for XLibre'
+pkgdesc='SonicDE workspace components'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace'
 license=(LGPL-2.0-or-later)
@@ -86,7 +84,6 @@ depends=(accountsservice
          plasma-activities-stats
          plasma5support
          prison
-         sonic-win
          qt6-5compat
          qt6-base
          qt6-declarative
@@ -102,6 +99,7 @@ depends=(accountsservice
          sonic-interface-libraries
          sonic-screenlocker
          sonic-sysguard-library
+         sonic-win
          systemd-libs
          wayland
          xcb-util
@@ -120,7 +118,7 @@ makedepends=(baloo
              plasma-wayland-protocols
              qcoro)
 groups=(plasma)
-source=("$pkgname-${_pkgver}.tar.gz::${url}/archive/refs/tags/${_pkgtag}.tar.gz")
+source=("$pkgname-${pkgver}.tar.gz::${url}/archive/refs/tags/${_pkgtag}.tar.gz")
 #source=("git+${url}.git#tag=${_pkgtag}")
 sha256sums=('96ecad248dfe4cd0a88484cfb0f87cff388d47e351443d32ee71a6c1197e7a99')
 validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
