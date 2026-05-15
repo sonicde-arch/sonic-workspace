@@ -2,7 +2,7 @@
 
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
-pkgver=6.6.4
+pkgver=6.6.5
 _pkgtag="${pkgver}"
 pkgrel=1
 pkgdesc='SonicDE workspace components'
@@ -120,7 +120,7 @@ makedepends=(baloo
 groups=(plasma)
 source=("$pkgname-${pkgver}.tar.gz::${url}/archive/refs/tags/${_pkgtag}.tar.gz")
 #source=("git+${url}.git#tag=${_pkgtag}")
-sha256sums=('96ecad248dfe4cd0a88484cfb0f87cff388d47e351443d32ee71a6c1197e7a99')
+sha256sums=('d67c6585d2c4ed5e4ebb8b8956955997532c5577c4c859e011f09daab2417093')
 validpgpkeys=('E0A3EB202F8E57528E13E72FD7574483BB57B18D'  # Jonathan Esk-Riddell <jr@jriddell.org>
               '0AAC775BB6437A8D9AF7A3ACFE0784117FBCE11D'  # Bhushan Shah <bshah@kde.org>
               'D07BD8662C56CB291B316EB2F5675605C74E02CF'  # David Edmundson <davidedmundson@kde.org>
