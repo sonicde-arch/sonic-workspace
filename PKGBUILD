@@ -6,8 +6,8 @@
 
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
-pkgver=6.6.5
-pkgrel=2
+pkgver=6.6.5.1
+pkgrel=1
 pkgdesc='SonicDE workspace components'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace'
@@ -42,7 +42,6 @@ depends=(accountsservice
          kitemmodels
          kjobwidgets
          knewstuff
-         knighttime
          knotifications
          kpackage
          kparts
@@ -98,17 +97,16 @@ depends=(accountsservice
          sonic-frameworks-runner
          sonic-frameworks-windowsystem
          sonic-interface-libraries
+         sonic-night-light
          sonic-screenlocker
          sonic-sysguard-library
          sonic-win
          systemd-libs
-         wayland
          xcb-util
          xcb-util-cursor
          xcb-util-image
          xorg-xmessage
          xorg-xrdb
-         xorg-xwayland
          zlib)
 makedepends=(baloo
              networkmanager-qt
@@ -117,7 +115,7 @@ makedepends=(baloo
              sonic-frameworks-doctools)
 groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('d67c6585d2c4ed5e4ebb8b8956955997532c5577c4c859e011f09daab2417093')
+sha256sums=('84182ea3367b1645cf2b772df44a5f0155776bd951856eb218a09980db343e55')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
