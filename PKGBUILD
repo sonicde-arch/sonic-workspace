@@ -7,7 +7,7 @@
 pkgbase=sonic-workspace
 pkgname=(sonic-workspace sonic-x11-session)
 pkgver=6.6.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc='SonicDE workspace components'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-workspace'
