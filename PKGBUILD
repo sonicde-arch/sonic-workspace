@@ -55,10 +55,8 @@ depends=(accountsservice
          ktextwidgets
          kuserfeedback
          kwallet
-         kwayland
          kwidgetsaddons
          kxmlgui
-         layer-shell-qt
          libcanberra
          libice
          libkexiv2
@@ -130,7 +128,6 @@ package_sonic-workspace() {
             'baloo: Baloo search runner'
             'discover: manage applications installation from the launcher'
             'kdepim-addons: displaying PIM events in the calendar'
-            'kwayland-integration: Wayland integration for Qt5 applications'
             'networkmanager-qt: IP based geolocation'
             'plasma-workspace-wallpapers: additional wallpapers'
             'plasma5-integration: use Plasma settings in Qt5 applications'
@@ -144,7 +141,6 @@ package_sonic-workspace() {
 
   rm -r "$pkgdir"/usr/share/xsessions/plasmax11.desktop
 }
-
 
 package_sonic-x11-session() {
   pkgdesc='SonicDE X11 session'
